@@ -29,9 +29,12 @@ if(age < 18) {
 // OUTPUT
 let finalPrice;
 if(age < 18) {
-     console.log(ticketPrice - ticketPrice * 20 / 100);
+     console.log (ticketPrice - ticketPrice * 20 / 100);
 } else if (age > 65) { 
      console.log(ticketPrice - ticketPrice * 40 / 100);
 } else {
      console.log(ticketPrice);
 }
+
+let roundedTicketPrice = finalPrice.toFixed(2);
+console.log(roundedTicketPrice)
