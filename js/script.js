@@ -17,24 +17,21 @@ console.log(ticketPrice);
 
 // ESECUZIONE LOGICA
 
-let discount;
+let discount = 0;
 if(age < 18) {
-     console.log(ticketPrice * 20 / 100);    
+     discount = 20;    
 } else if (age > 65) { 
-     console.log(ticketPrice * 40 / 100);
-} else {
-     console.log(ticketPrice)
+     discount = 40;
 }
+
+console.log(discount);
+
 
 // OUTPUT
-let finalPrice;
-if(age < 18) {
-     console.log (ticketPrice - ticketPrice * 20 / 100);
-} else if (age > 65) { 
-     console.log(ticketPrice - ticketPrice * 40 / 100);
-} else {
-     console.log(ticketPrice);
-}
 
-let roundedTicketPrice = finalPrice.toFixed(2);
-console.log(roundedTicketPrice)
+const finalPrice = ticketPrice - (ticketPrice * discount / 100);
+console.log(finalPrice);
+
+
+const message = `Il prezzo base è €${ticketPrice.toFixed(2)}. Dato che il passeggero ha ${age} anni, ha diritto ad uno sconto del ${discount}%. Il prezzo finale, quindi, è €${finalPrice.toFixed(2)}`;
+alert(message);
